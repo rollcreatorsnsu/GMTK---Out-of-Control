@@ -33,11 +33,20 @@ public abstract class Enemy : MonoBehaviour
         player = null;
     }
 
-    private void OnCollisionStay2D(Collision2D other)
+    private void OnTriggerStay2D(Collision2D other)
     {
         if (other.gameObject.CompareTag("Player"))
         {
             player.Hit(damage);
+        }
+    }
+
+    public void Hit(float damage)
+    {
+        health -= damage;
+        if (health < 0)
+        {
+            Destroy(gameObject);
         }
     }
 
