@@ -5,11 +5,13 @@ using UnityEngine;
 [RequireComponent(typeof(Rigidbody2D), typeof(Collider2D))]
 public class Player : MonoBehaviour
 {
-    public delegate void Death();
-    public static event Death PlayerIsDead;
+    public delegate void DeathHandler();
+    public static event DeathHandler PlayerIsDead;
 
     [SerializeField] private float health;
-
+    [SerializeField] private float hitTime;
+    private float lastHit = 0;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -47,6 +49,8 @@ public class Player : MonoBehaviour
 
     public void Hit(float damage)
     {
+        if (Time.time - lastHit < hitTime) return;
+        lastHit = Time.time;
         health -= damage;
         if (health < 0)
         {
