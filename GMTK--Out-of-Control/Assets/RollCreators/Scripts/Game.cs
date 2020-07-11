@@ -5,13 +5,13 @@ using UnityEngine;
 public class Game : MonoBehaviour
 {
     public delegate void MagicUpdateHandler(Magic magic);
-    public event MagicUpdateHandler MagicUpdated;
+    public static event MagicUpdateHandler MagicUpdated;
 
     private Magic magic;
     // Start is called before the first frame update
     void Start()
     {
-        
+        Player.PlayerIsDead += GameOver;
     }
 
     // Update is called once per frame
@@ -24,5 +24,10 @@ public class Game : MonoBehaviour
     {
         this.magic = magic;
         MagicUpdated.Invoke(this.magic);
+    }
+
+    private void GameOver()
+    {
+        
     }
 }

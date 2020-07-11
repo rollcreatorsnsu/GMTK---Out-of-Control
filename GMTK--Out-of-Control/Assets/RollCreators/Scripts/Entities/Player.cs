@@ -5,12 +5,15 @@ using UnityEngine;
 [RequireComponent(typeof(Rigidbody2D), typeof(Collider2D))]
 public class Player : MonoBehaviour
 {
-    [SerializeField] private Game game;
+    public delegate void Death();
+    public static event Death PlayerIsDead;
+
+    [SerializeField] private float health;
 
     // Start is called before the first frame update
     void Start()
     {
-        game.MagicUpdated += MagicUpdateHandler;
+        Game.MagicUpdated += MagicUpdateHandler;
     }
 
     // Update is called once per frame
@@ -32,8 +35,23 @@ public class Player : MonoBehaviour
         }
     }
 
+    private void Die()
+    {
+        PlayerIsDead.Invoke();
+    }
+
     private void MagicUpdateHandler(Magic magic)
     {
-        
+
     }
+
+    public void Hit(float damage)
+    {
+        health -= damage;
+        if (health < 0)
+        {
+            Die();
+        }
+    }
+
 }
