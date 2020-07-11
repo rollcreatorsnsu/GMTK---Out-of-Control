@@ -1,8 +1,6 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Assertions.Comparers;
 
 [RequireComponent(typeof(Collider2D), typeof(Rigidbody2D))]
 public class LightningStrike : MonoBehaviour, IMagic

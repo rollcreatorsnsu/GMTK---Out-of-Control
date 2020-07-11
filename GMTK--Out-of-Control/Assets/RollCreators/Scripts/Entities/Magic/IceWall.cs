@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 [RequireComponent(typeof(Collider2D), typeof(Rigidbody2D))]
 public class IceWall : MonoBehaviour, IMagic
@@ -11,11 +9,5 @@ public class IceWall : MonoBehaviour, IMagic
     void Start()
     {
         Destroy(gameObject, secondsToLife);
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }
