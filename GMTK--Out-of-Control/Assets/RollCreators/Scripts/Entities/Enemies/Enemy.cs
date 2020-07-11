@@ -7,6 +7,7 @@ using UnityEngine;
 public abstract class Enemy : MonoBehaviour
 {
     [SerializeField] protected FieldOfView fieldOfView;
+    [SerializeField] protected float health;
     [SerializeField] protected float damage;
     protected Player player;
 
