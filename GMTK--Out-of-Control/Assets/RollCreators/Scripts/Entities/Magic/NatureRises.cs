@@ -28,7 +28,7 @@ public class NatureRises : MonoBehaviour, IMagic
     {
         if (other.gameObject.CompareTag("Enemy"))
         {
-            Instantiate(rise, other.gameObject.transform.position, Quaternion.identity);
+            rises.Add(Instantiate(rise, other.gameObject.transform.position, Quaternion.identity));
         }
     }
 }
