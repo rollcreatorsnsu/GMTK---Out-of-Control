@@ -14,6 +14,9 @@ public class Skeleton : Enemy
     }
     protected override void Move()
     {
+        Vector3 scale = transform.localScale;
+        scale.x = transform.position.x > player.transform.position.x ? -1 : 1;
+        transform.localScale = scale;
         if (Vector3.Distance(transform.position, player.transform.position) > distance)
         {
             animator.Play("Move");

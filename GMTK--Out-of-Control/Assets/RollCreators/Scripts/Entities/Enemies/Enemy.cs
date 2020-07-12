@@ -16,7 +16,7 @@ public abstract class Enemy : MonoBehaviour
 
     void Update()
     {
-        if (player == null) return;
+        if (player == null || health < 0) return;
         Move();
     }
 
