@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Ice Wall_destroy
+  m_Name: Ice_Wall_destroy
   serializedVersion: 6
   m_Legacy: 0
   m_Compressed: 0
@@ -30,7 +30,7 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 0.5
+        time: 0.5833333
         value: 0
         inSlope: 0
         outSlope: 0
@@ -48,10 +48,10 @@ AnimationClip:
   m_PPtrCurves:
   - curve:
     - time: 0
-      value: {fileID: -7323343374721881767, guid: 7d09f03c6b0416f4195761b720a8f1e9,
+      value: {fileID: -3678927024925604163, guid: 4f2e4d000286dee42aef3df075522875,
         type: 3}
-    - time: 0.5
-      value: {fileID: -7323343374721881767, guid: 7d09f03c6b0416f4195761b720a8f1e9,
+    - time: 0.5833333
+      value: {fileID: -3678927024925604163, guid: 4f2e4d000286dee42aef3df075522875,
         type: 3}
     attribute: m_Sprite
     path: 
@@ -79,14 +79,14 @@ AnimationClip:
       customType: 23
       isPPtrCurve: 1
     pptrCurveMapping:
-    - {fileID: -7323343374721881767, guid: 7d09f03c6b0416f4195761b720a8f1e9, type: 3}
-    - {fileID: -7323343374721881767, guid: 7d09f03c6b0416f4195761b720a8f1e9, type: 3}
+    - {fileID: -3678927024925604163, guid: 4f2e4d000286dee42aef3df075522875, type: 3}
+    - {fileID: -3678927024925604163, guid: 4f2e4d000286dee42aef3df075522875, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 0.51666665
+    m_StopTime: 0.59999996
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
@@ -115,7 +115,7 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 0.5
+        time: 0.5833333
         value: 0
         inSlope: 0
         outSlope: 0
