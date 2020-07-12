@@ -1,31 +1,25 @@
 fileFormatVersion: 2
-guid: fa29b3b0cba249544820fa813f600bfe
+guid: 5bb624d21fbff4f49b451dd87680ff07
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -5505784301242206033
-    second: Skills_0
+      213: 206109582571645112
+    second: Wizard_young_jump 1_0
   - first:
-      213: 7119002349883303594
-    second: Skills_1
+      213: -3186317715045408871
+    second: Wizard_young_jump 1_1
   - first:
-      213: -6246062721824389004
-    second: Skills_2
+      213: 4825993389312185897
+    second: Wizard_young_jump 1_2
   - first:
-      213: 8685077388864575728
-    second: Skills_3
+      213: -229361330932486463
+    second: Wizard_young_jump 1_3
   - first:
-      213: -1140953881901911216
-    second: Skills_4
+      213: 259752436314499774
+    second: Wizard_young_jump 1_4
   - first:
-      213: 1752313724658198474
-    second: Skills_5
-  - first:
-      213: -1388515766092869844
-    second: Skills_6
-  - first:
-      213: 3672223182082440460
-    second: Skills_7
+      213: -8732089614311017867
+    second: Wizard_young_jump 1_5
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -81,7 +75,7 @@ TextureImporter:
   maxTextureSizeSet: 0
   compressionQualitySet: 0
   textureFormatSet: 0
-  applyGammaDecoding: 1
+  applyGammaDecoding: 0
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -111,97 +105,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Skills_0
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 16
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: fa8398259568793b0800000000000000
-      internalID: -5505784301242206033
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Skills_1
-      rect:
-        serializedVersion: 2
-        x: 16
-        y: 16
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: aa627fb4be6cbc260800000000000000
-      internalID: 7119002349883303594
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Skills_2
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 16
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 47809dc2c078159a0800000000000000
-      internalID: -6246062721824389004
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Skills_3
-      rect:
-        serializedVersion: 2
-        x: 48
-        y: 16
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0f8dc02aed7978870800000000000000
-      internalID: 8685077388864575728
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Skills_4
+      name: Wizard_young_jump 1_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 16
-        height: 16
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -209,41 +119,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 053322c4d748a20f0800000000000000
-      internalID: -1140953881901911216
+      spriteID: 8b8acf5c29f3cd200800000000000000
+      internalID: 206109582571645112
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Skills_5
-      rect:
-        serializedVersion: 2
-        x: 16
-        y: 0
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ac72b456c08715810800000000000000
-      internalID: 1752313724658198474
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Skills_6
+      name: Wizard_young_jump 1_1
       rect:
         serializedVersion: 2
         x: 32
         y: 0
-        width: 16
-        height: 16
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -251,20 +140,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c2f410574400bbce0800000000000000
-      internalID: -1388515766092869844
+      spriteID: 99f1f258bece7c3d0800000000000000
+      internalID: -3186317715045408871
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Skills_7
+      name: Wizard_young_jump 1_2
       rect:
         serializedVersion: 2
-        x: 48
+        x: 64
         y: 0
-        width: 16
-        height: 16
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -272,8 +161,71 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c0d7aff178b56f230800000000000000
-      internalID: 3672223182082440460
+      spriteID: 926165a1b6f59f240800000000000000
+      internalID: 4825993389312185897
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wizard_young_jump 1_3
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ceee80b51521dcf0800000000000000
+      internalID: -229361330932486463
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wizard_young_jump 1_4
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eba6110f673da9300800000000000000
+      internalID: 259752436314499774
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wizard_young_jump 1_5
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5723d18a2c261d680800000000000000
+      internalID: -8732089614311017867
       vertices: []
       indices: 
       edges: []
