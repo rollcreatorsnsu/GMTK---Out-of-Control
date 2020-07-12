@@ -11,9 +11,11 @@ public class LightningStrike : MonoBehaviour, IMagic
     private GameObject player;
     private bool updated = false;
     private Animator animator;
+    private GameObject nearestEnemy = null;
 
     void Start()
     {
+        player = GameObject.Find("Player"); // TODO: optimize
         animator = GetComponent<Animator>();
     }
 
@@ -26,7 +28,6 @@ public class LightningStrike : MonoBehaviour, IMagic
             return;
         }
         float minDistance = Single.PositiveInfinity;
-        GameObject nearestEnemy = null;
         foreach (GameObject enemyOnj in enemies)
         {
             float distance = Vector3.Distance(transform.position, enemyOnj.transform.position);
@@ -36,30 +37,25 @@ public class LightningStrike : MonoBehaviour, IMagic
                 minDistance = distance;
             }
         }
+        if (nearestEnemy != null)
+        {
+            transform.position = nearestEnemy.transform.position;
+        }
+        animator.Play("Light Bolt");
+    }
 
+    public void Hit()
+    {
         if (nearestEnemy == null)
         {
-            HitPlayer(player.GetComponent<Player>());
+            player.GetComponent<Player>().Hit(damage);
         }
         else
         {
-            HitEnemy(nearestEnemy.GetComponent<Enemy>());
+            nearestEnemy.GetComponent<Enemy>().Hit(damage);
         }
+        Destroy(gameObject);
     }
-
-    private void HitPlayer(Player player)
-    {
-        animator.Play("Light Bolt");
-        player.Hit(damage);
-    }
-    
-    private void HitEnemy(Enemy enemy)
-    {
-        transform.position = enemy.transform.position;
-        animator.Play("Light Bolt");
-        enemy.Hit(damage);
-    }
-
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.CompareTag("Enemy"))

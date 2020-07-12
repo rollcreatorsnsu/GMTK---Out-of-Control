@@ -17,7 +17,7 @@ public class Game : MonoBehaviour
     public void SetCurrentMagic(Magic magic)
     {
         this.magic = magic;
-        MagicUpdated.Invoke(this.magic);
+        MagicUpdated?.Invoke(this.magic);
     }
 
     private void GameOver()

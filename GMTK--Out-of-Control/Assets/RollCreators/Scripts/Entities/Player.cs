@@ -35,7 +35,7 @@ public class Player : MonoBehaviour
     [SerializeField] private Transform firePoint;
     private float lastHit = 0;
     private float lastAttack = 0;
-    private Magic magic = Magic.ICE_WALL;
+    private Magic magic = Magic.LIGHTNING_STRIKE;
     private Dictionary<Magic, GameObject> magics = new Dictionary<Magic, GameObject>();
     private Animator animator;
     
@@ -112,7 +112,7 @@ public class Player : MonoBehaviour
         animator.Play("Hit");
         lastHit = Time.time;
         health -= damage;
-        PlayerIsHit.Invoke(health);
+        PlayerIsHit?.Invoke(health);
         if (health < 0)
         {
             Die();
