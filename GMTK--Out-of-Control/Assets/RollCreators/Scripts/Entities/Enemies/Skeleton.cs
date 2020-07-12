@@ -5,6 +5,7 @@ public class Skeleton : Enemy
 {
     [SerializeField] private float distance;
     [SerializeField] private GameObject bone;
+    [SerializeField] private Transform firePoint;
     private Animator animator;
 
     void Start()
@@ -30,7 +31,7 @@ public class Skeleton : Enemy
 
     public void Attack()
     {
-        Instantiate(bone, transform.position, Quaternion.identity);
+        Instantiate(bone, firePoint.position, Quaternion.identity);
     }
     
     protected override void Die()

@@ -58,6 +58,7 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (health < 0) return;
         if (Input.GetKey(KeyCode.LeftArrow))
         {
             Vector3 scale = transform.localScale;
@@ -138,7 +139,7 @@ public class Player : MonoBehaviour
 
     public void Hit(float damage)
     {
-        if (Time.time - lastHit < hitTime) return;
+        if (Time.time - lastHit < hitTime || health < 0) return;
         animator.Play("Hit");
         lastHit = Time.time;
         health -= damage;
