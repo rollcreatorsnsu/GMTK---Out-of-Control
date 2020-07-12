@@ -60,13 +60,19 @@ public class Player : MonoBehaviour
     void Update()
     {
         if (health < 0) return;
+//        Debug.Log(jump_move);
         if (Input.GetKeyUp(KeyCode.Z) || Input.GetKeyUp(KeyCode.UpArrow) && !jump_move)
         {
             jump_move = true;
             transform.position += Vector3.up * Time.deltaTime * jump_speed;
             animator.Play("Jump");
-            return;
         }
+
+        if (jump_move)
+        {
+            transform.position += Vector3.up * Time.deltaTime * jump_speed;
+        }
+
 
         if (Input.GetKey(KeyCode.LeftArrow))
         {
@@ -97,14 +103,11 @@ public class Player : MonoBehaviour
             Attack();
         }
         
-        if (jump_move)
-        {
-            transform.position += Vector3.up * Time.deltaTime * jump_speed;
-        }
     }
 
     public void Jumped()
     {
+        Debug.Log("jumped");
         jump_move = false;
     }
 
@@ -113,6 +116,10 @@ public class Player : MonoBehaviour
         if (!jump_move)
         {
             animator.Play("Walking");
+        }
+        else
+        {
+            Debug.Log("Move");
         }
     }
 

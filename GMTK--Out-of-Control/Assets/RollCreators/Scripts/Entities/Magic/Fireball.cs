@@ -5,7 +5,7 @@ public class Fireball : MonoBehaviour, IMagic
 {
     [SerializeField] private GameObject explosion;
     [SerializeField] private Transform firePoint;
-    [SerializeField] private float speed = 2;
+    [SerializeField] private float speed = 4;
     private Vector3 direction;
 
     void Start()

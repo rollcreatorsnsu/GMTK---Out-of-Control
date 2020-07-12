@@ -7,9 +7,11 @@ public class SkeletonBone : MonoBehaviour
     [SerializeField] private float damage;
     [SerializeField] private float speed = 2;
     private Player player;
+    private Vector3 direction;
     void Start()
     {
         player = GameObject.Find("Player").GetComponent<Player>(); // TODO: optimize
+        direction = player.transform.position.x < transform.position.x ? Vector3.left : Vector3.right;
     }
 
     void Update()
@@ -31,6 +33,6 @@ public class SkeletonBone : MonoBehaviour
 
     protected void Move()
     {
-        transform.position += (player.transform.position.x < transform.position.x ? Vector3.left : Vector3.right) * Time.deltaTime * speed;
+        transform.position += direction * Time.deltaTime * speed;
     }
 }

@@ -204,3 +204,4 @@ MonoBehaviour:
   explosion: {fileID: 4716459691675198471, guid: 629028ac793570142bed09f7c71dd0ee,
     type: 3}
   firePoint: {fileID: 6805185463306528081}
+  speed: 4
