@@ -92,6 +92,10 @@ public class Player : MonoBehaviour
         if (Time.time - lastAttack < attackTime) return;
         animator.Play(magicAnimationNames[magic]);
         lastAttack = Time.time;
+    }
+
+    public void DoAttack(Magic magic)
+    {
         Instantiate(magics[magic], firePoint.position, Quaternion.identity);
     }
 
