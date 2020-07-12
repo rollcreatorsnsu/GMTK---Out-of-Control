@@ -79,7 +79,7 @@ Animator:
   m_Controller: {fileID: 9100000, guid: 5fb474098314c5f4a9b598d62a1c3b7c, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
-  m_ApplyRootMotion: 0
+  m_ApplyRootMotion: 1
   m_LinearVelocityBlending: 0
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
@@ -129,7 +129,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1.0625, y: 1.875}
+  m_Size: {x: 2, y: 2}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 0
@@ -197,6 +197,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f56054d00e6b0c43a1a167720d6db71, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  jump_move: 0
+  jump_speed: 7
   health: 5
   hitTime: 0.5
   attackTime: 0.5
@@ -214,3 +216,5 @@ MonoBehaviour:
     magicObject: {fileID: 2771235591279979132, guid: f523db31c8f5c3449b83594b570066ee,
       type: 3}
   firePoint: {fileID: 7306010285016752433}
+  magicCircle: {fileID: 3412905483460085823, guid: b1b8523249bdafe499461228757e4214,
+    type: 3}
