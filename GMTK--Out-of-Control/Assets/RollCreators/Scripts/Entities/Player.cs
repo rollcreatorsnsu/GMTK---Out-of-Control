@@ -14,6 +14,9 @@ public class Player : MonoBehaviour
     
     public delegate void DeathHandler();
     public static event DeathHandler PlayerIsDead;
+
+    public delegate void HitHandler(float health);
+    public static event HitHandler PlayerIsHit;
     
     [SerializeField] private float health;
     [SerializeField] private float hitTime = 0.5f;
@@ -80,6 +83,7 @@ public class Player : MonoBehaviour
         if (Time.time - lastHit < hitTime) return;
         lastHit = Time.time;
         health -= damage;
+        PlayerIsHit.Invoke(health);
         if (health < 0)
         {
             Die();
