@@ -15,14 +15,17 @@ public class SkeletonBone : MonoBehaviour
     {
         Move();
     }
-    private void OnCollisionStay2D(Collision2D other)
+    private void OnTriggerStay2D(Collider2D other)
     {
-        if (other.gameObject.CompareTag("Enemy")) return;
-        if (other.gameObject.CompareTag("Player"))
+        bool isPlayer = other.gameObject.CompareTag("Player");
+        if (isPlayer || other.gameObject.CompareTag("Solid"))
         {
-            player.Hit(damage);
+            if (isPlayer)
+            {
+                player.Hit(damage);
+            }
+            Destroy(gameObject);
         }
-        Destroy(gameObject);
     }
 
     protected void Move()
