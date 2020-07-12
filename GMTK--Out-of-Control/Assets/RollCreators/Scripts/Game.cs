@@ -1,4 +1,7 @@
-﻿using UnityEngine;
+﻿using System;
+using System.Collections;
+using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class Game : MonoBehaviour
 {
@@ -12,6 +15,7 @@ public class Game : MonoBehaviour
     {
         Player.PlayerIsDead += GameOver;
         Player.PlayerIsHit += UpdateHealthBar;
+        StartCoroutine(UpdateMagic()); // TODO: delete, just debug
     }
 
     public void SetCurrentMagic(Magic magic)
@@ -28,5 +32,12 @@ public class Game : MonoBehaviour
     private void UpdateHealthBar(float health)
     {
         gameUi.UpdateHealthBar(health);
+    }
+
+    private IEnumerator UpdateMagic()
+    {
+        Magic[] magics = (Magic[])Enum.GetValues(typeof(Magic));
+        SetCurrentMagic(magics[Random.Range(0, magics.Length)]);
+        yield return new WaitForSeconds(0.5f);
     }
 }
