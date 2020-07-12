@@ -3,15 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class ConfirmationUI : MonoBehaviour
+public class IntroUI : MonoBehaviour
 {
-    public void Yes()
+    public void GoToMenu()
     {
         SceneManager.LoadScene("Menu");
-    }
-
-    public void No()
-    {
-        gameObject.SetActive(false);
     }
 }
