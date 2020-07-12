@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 8650693099762653391}
   m_Layer: 0
   m_Name: Bone
-  m_TagString: Enemy
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -118,6 +118,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 1
+  speed: 2
 --- !u!50 &4583525689044241461
 Rigidbody2D:
   serializedVersion: 4
