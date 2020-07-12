@@ -9,6 +9,7 @@ public class Game : MonoBehaviour
     public static event MagicUpdateHandler MagicUpdated;
 
     [SerializeField] private GameUI gameUi;
+    [SerializeField] private GameOverUI gameOverUi;
     private Magic magic;
     // Start is called before the first frame update
     void Start()
@@ -27,7 +28,7 @@ public class Game : MonoBehaviour
 
     private void GameOver()
     {
-        
+        gameOverUi.Dead();
     }
 
     private void UpdateHealthBar(float health)

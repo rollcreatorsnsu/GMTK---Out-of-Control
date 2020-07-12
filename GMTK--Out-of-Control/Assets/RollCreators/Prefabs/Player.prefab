@@ -182,10 +182,10 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: -0.53125, y: 0.96875}
+    - - {x: -0.54735136, y: 0.8721162}
       - {x: -0.53125, y: -0.96875}
-      - {x: 0.53125, y: -0.96875}
-      - {x: 0.53125, y: 0.96875}
+      - {x: 0.27363348, y: -1.017067}
+      - {x: 0.30583572, y: 0.8721162}
 --- !u!114 &7687480508257892854
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -218,6 +218,7 @@ MonoBehaviour:
       type: 3}
   firePoint: {fileID: 7306010285016752433}
   magicCircle: {fileID: 2263524990065903911}
+  speed: 2
 --- !u!1001 &6016911046423022962
 PrefabInstance:
   m_ObjectHideFlags: 0

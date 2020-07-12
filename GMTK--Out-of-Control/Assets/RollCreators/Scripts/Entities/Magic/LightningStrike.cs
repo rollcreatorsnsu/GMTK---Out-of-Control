@@ -30,6 +30,7 @@ public class LightningStrike : MonoBehaviour, IMagic
         float minDistance = Single.PositiveInfinity;
         foreach (GameObject enemyOnj in enemies)
         {
+            if (enemyOnj == null) continue;
             float distance = Vector3.Distance(transform.position, enemyOnj.transform.position);
             if (distance < minDistance)
             {
