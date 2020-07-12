@@ -33,6 +33,7 @@ public class Player : MonoBehaviour
     [SerializeField] private float attackTime = 0.5f;
     [SerializeField] private List<MagicMapItem> magicsList;
     [SerializeField] private Transform firePoint;
+    [SerializeField] private GameObject magicCircle;
     private float lastHit = 0;
     private float lastAttack = 0;
     private Magic magic = Magic.FIREBALL;
@@ -58,6 +59,9 @@ public class Player : MonoBehaviour
             Vector3 scale = transform.localScale;
             scale.x = -1;
             transform.localScale = scale;
+            scale = magicCircle.transform.localScale;
+            scale.x = -1;
+            magicCircle.transform.localScale = scale;
             transform.position += Vector3.left * Time.deltaTime;
             Walk();
         }
@@ -67,6 +71,9 @@ public class Player : MonoBehaviour
             Vector3 scale = transform.localScale;
             scale.x = 1;
             transform.localScale = scale;
+            scale = magicCircle.transform.localScale;
+            scale.x = 1;
+            magicCircle.transform.localScale = scale;
             transform.position += Vector3.right * Time.deltaTime;
             Walk();
         }
