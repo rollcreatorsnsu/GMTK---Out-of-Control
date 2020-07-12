@@ -5,6 +5,8 @@ using UnityEngine;
 [RequireComponent(typeof(Rigidbody2D), typeof(Collider2D), typeof(Animator))]
 public class Player : MonoBehaviour
 {
+    [SerializeField] bool jump_move;
+    [SerializeField] float jump_speed = 200;
     [Serializable]
     private struct MagicMapItem
     {
@@ -40,9 +42,11 @@ public class Player : MonoBehaviour
     private Dictionary<Magic, GameObject> magics = new Dictionary<Magic, GameObject>();
     private Animator animator;
     
+    
     // Start is called before the first frame update
     void Start()
     {
+        jump_move = false;
         animator = GetComponent<Animator>();
         foreach (MagicMapItem magicItem in magicsList)
         {
@@ -74,19 +78,26 @@ public class Player : MonoBehaviour
             scale = magicCircle.transform.localScale;
             scale.x = 1;
             magicCircle.transform.localScale = scale;
-            transform.position += Vector3.right * Time.deltaTime;
+            transform.position += Vector3.right * Time.deltaTime ;
             Walk();
         }
         
         if (Input.GetKeyUp(KeyCode.Z) || Input.GetKeyUp(KeyCode.UpArrow))
         {
             animator.Play("Jump");
+            
         }
 
         if (Input.GetKeyUp(KeyCode.X))
         {
             Attack();
         }
+        if (jump_move == true)
+        {
+            transform.position += Vector3.up * Time.deltaTime * jump_speed;
+        }
+        
+        jump_move = false;
     }
 
     private void Walk()
