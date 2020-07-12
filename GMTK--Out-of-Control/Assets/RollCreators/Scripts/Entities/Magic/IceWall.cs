@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections;
+using System.Dynamic;
 using UnityEngine;
 
 [RequireComponent(typeof(Collider2D), typeof(Rigidbody2D), typeof(Animator))]
@@ -18,6 +19,11 @@ public class IceWall : MonoBehaviour, IMagic
     private IEnumerator Fall()
     {
         yield return new WaitForSeconds(secondsToLife);
-        animator.Play("Ice Wall_destroy");
+        animator.Play("Ice_Wall_destroy");
+    }
+
+    public void Delete()
+    {
+        Destroy(gameObject);
     }
 }

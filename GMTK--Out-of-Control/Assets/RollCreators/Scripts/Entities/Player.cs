@@ -35,7 +35,7 @@ public class Player : MonoBehaviour
     [SerializeField] private Transform firePoint;
     private float lastHit = 0;
     private float lastAttack = 0;
-    private Magic magic;
+    private Magic magic = Magic.ICE_WALL;
     private Dictionary<Magic, GameObject> magics = new Dictionary<Magic, GameObject>();
     private Animator animator;
     
