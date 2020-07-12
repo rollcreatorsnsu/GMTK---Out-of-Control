@@ -6,4 +6,9 @@ public class Troll : Enemy
     {
         transform.position += (player.transform.position - transform.position).normalized * Time.deltaTime;
     }
+
+    protected override void Die()
+    {
+        
+    }
 }
