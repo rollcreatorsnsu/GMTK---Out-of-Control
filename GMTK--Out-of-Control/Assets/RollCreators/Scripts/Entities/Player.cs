@@ -36,6 +36,7 @@ public class Player : MonoBehaviour
     [SerializeField] private List<MagicMapItem> magicsList;
     [SerializeField] private Transform firePoint;
     [SerializeField] private GameObject magicCircle;
+    [SerializeField] private float speed = 2;
     private float lastHit = 0;
     private float lastAttack = 0;
     private Magic magic = Magic.FIREBALL;
@@ -59,6 +60,14 @@ public class Player : MonoBehaviour
     void Update()
     {
         if (health < 0) return;
+        if (Input.GetKeyUp(KeyCode.Z) || Input.GetKeyUp(KeyCode.UpArrow) && !jump_move)
+        {
+            jump_move = true;
+            transform.position += Vector3.up * Time.deltaTime * jump_speed;
+            animator.Play("Jump");
+            return;
+        }
+
         if (Input.GetKey(KeyCode.LeftArrow))
         {
             Vector3 scale = transform.localScale;
@@ -67,7 +76,7 @@ public class Player : MonoBehaviour
             scale = magicCircle.transform.localScale;
             scale.x = -1;
             magicCircle.transform.localScale = scale;
-            transform.position += Vector3.left * Time.deltaTime;
+            transform.position += Vector3.left * Time.deltaTime * speed;
             Walk();
         }
 
@@ -79,17 +88,10 @@ public class Player : MonoBehaviour
             scale = magicCircle.transform.localScale;
             scale.x = 1;
             magicCircle.transform.localScale = scale;
-            transform.position += Vector3.right * Time.deltaTime ;
+            transform.position += Vector3.right * Time.deltaTime * speed;
             Walk();
         }
         
-        if (Input.GetKeyUp(KeyCode.Z) || Input.GetKeyUp(KeyCode.UpArrow) && !jump_move)
-        {
-            jump_move = true;
-            transform.position += Vector3.up * Time.deltaTime * jump_speed;
-            animator.Play("Jump");
-        }
-
         if (Input.GetKeyUp(KeyCode.X))
         {
             Attack();

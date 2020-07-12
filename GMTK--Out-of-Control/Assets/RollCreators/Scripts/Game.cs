@@ -13,6 +13,7 @@ public class Game : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Time.timeScale = 1;
         Player.PlayerIsDead += GameOver;
         Player.PlayerIsHit += UpdateHealthBar;
         StartCoroutine(UpdateMagic()); // TODO: delete, just debug

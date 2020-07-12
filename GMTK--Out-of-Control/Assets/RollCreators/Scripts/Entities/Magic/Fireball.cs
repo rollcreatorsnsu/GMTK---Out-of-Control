@@ -5,6 +5,7 @@ public class Fireball : MonoBehaviour, IMagic
 {
     [SerializeField] private GameObject explosion;
     [SerializeField] private Transform firePoint;
+    [SerializeField] private float speed = 2;
     private Vector3 direction;
 
     void Start()
@@ -19,7 +20,7 @@ public class Fireball : MonoBehaviour, IMagic
     // Update is called once per frame
     void Update()
     {
-        transform.position += direction * Time.deltaTime;
+        transform.position += direction * Time.deltaTime * speed;
     }
     
     void OnTriggerEnter2D(Collider2D other)
