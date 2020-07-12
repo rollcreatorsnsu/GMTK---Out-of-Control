@@ -12,4 +12,9 @@ public class FireballExplosion : MonoBehaviour
             other.gameObject.GetComponent<Enemy>().Hit(damage);
         }
     }
+
+    public void Delete()
+    {
+        Destroy(gameObject);
+    }
 }

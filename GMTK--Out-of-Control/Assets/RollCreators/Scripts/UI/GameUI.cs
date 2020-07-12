@@ -14,7 +14,7 @@ public class GameUI : MonoBehaviour
     {
         for (int i = 0; i < 5; i++)
         {
-            healthBar[0].sprite =  (health > i) ? fullHpSprite : emptyHpSprite;
+            healthBar[i].sprite =  (health > i) ? fullHpSprite : emptyHpSprite;
         }
     }
 
