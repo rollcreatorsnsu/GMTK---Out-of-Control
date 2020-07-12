@@ -175,10 +175,11 @@ MonoBehaviour:
     magicObject: {fileID: 3412905483460085823, guid: b1b8523249bdafe499461228757e4214,
       type: 3}
   - magicEnum: 1
-    magicObject: {fileID: 801753020316730037, guid: 680b463b415fa0c459104ec27cd84a94,
+    magicObject: {fileID: 8030996316782954279, guid: 91b1d3e8b1543b143934e46657c2c415,
       type: 3}
   - magicEnum: 2
     magicObject: {fileID: 5551432923807108538, guid: 12cffb564cd67914988733858c3154dd,
       type: 3}
   - magicEnum: 3
-    magicObject: {fileID: 0}
+    magicObject: {fileID: 2771235591279979132, guid: f523db31c8f5c3449b83594b570066ee,
+      type: 3}
