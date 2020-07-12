@@ -35,7 +35,7 @@ public class Player : MonoBehaviour
     [SerializeField] private Transform firePoint;
     private float lastHit = 0;
     private float lastAttack = 0;
-    private Magic magic = Magic.LIGHTNING_STRIKE;
+    private Magic magic = Magic.FIREBALL;
     private Dictionary<Magic, GameObject> magics = new Dictionary<Magic, GameObject>();
     private Animator animator;
     
