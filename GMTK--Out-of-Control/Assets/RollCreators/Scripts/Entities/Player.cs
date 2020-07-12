@@ -25,7 +25,7 @@ public class Player : MonoBehaviour
     private float lastHit = 0;
     private float lastAttack = 0;
     private Magic magic;
-    private Dictionary<Magic, GameObject> magics;
+    private Dictionary<Magic, GameObject> magics = new Dictionary<Magic, GameObject>();
     
     // Start is called before the first frame update
     void Start()
