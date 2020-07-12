@@ -98,7 +98,7 @@ public class Player : MonoBehaviour
             Walk();
         }
         
-        if (Input.GetKeyUp(KeyCode.X))
+        if (Input.GetKeyUp(KeyCode.X) && !jump_move)
         {
             Attack();
         }
