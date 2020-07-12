@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 2816742102336569063}
   - component: {fileID: 7368018471709534205}
   - component: {fileID: 3254798087236833998}
+  - component: {fileID: 6596118266063706269}
   m_Layer: 0
   m_Name: Root_small
   m_TagString: Untagged
@@ -144,3 +145,16 @@ EdgeCollider2D:
   - {x: -0.9644054, y: 1.3253775}
   - {x: 0.9181353, y: 1.3074977}
   - {x: 0.89157164, y: 0.034713745}
+--- !u!114 &6596118266063706269
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2816742102336569056}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9760fee4feb91d944ae75bcf4bb0eddf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dieAnimationName: Root_small_destroy

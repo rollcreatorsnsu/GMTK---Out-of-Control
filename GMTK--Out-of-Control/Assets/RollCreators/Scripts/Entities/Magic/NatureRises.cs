@@ -19,7 +19,7 @@ public class NatureRises : MonoBehaviour, IMagic
     {
         foreach (GameObject rise in rises)
         {
-            Destroy(rise);
+            rise.GetComponent<Rise>().Die();
         }
     }
 

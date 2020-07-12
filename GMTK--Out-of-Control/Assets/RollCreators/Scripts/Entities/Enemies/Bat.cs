@@ -4,6 +4,7 @@ public class Bat : Enemy
 {
 
     private Animator animator;
+    private bool isFlied = false;
 
     void Start()
     {
@@ -11,7 +12,7 @@ public class Bat : Enemy
         animator = GetComponent<Animator>();
     }
     
-    private void OnCollisionStay2D(Collision2D other)
+    private void OnTriggerStay2D(Collider2D other)
     {
         if (other.gameObject.CompareTag("Player"))
         {
@@ -21,7 +22,11 @@ public class Bat : Enemy
 
     protected override void Move()
     {
-        animator.Play("Fly");
+        if (!isFlied)
+        {
+            animator.Play("ToHunt");
+            isFlied = true;
+        }
         transform.position += (player.transform.position - transform.position).normalized * Time.deltaTime;
     }
 
