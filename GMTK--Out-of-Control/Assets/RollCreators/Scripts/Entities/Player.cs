@@ -52,14 +52,20 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyUp(KeyCode.LeftArrow))
+        if (Input.GetKey(KeyCode.LeftArrow))
         {
+            Vector3 scale = transform.localScale;
+            scale.x = -1;
+            transform.localScale = scale;
             transform.position += Vector3.left * Time.deltaTime;
             Walk();
         }
 
         if (Input.GetKey(KeyCode.RightArrow))
         {
+            Vector3 scale = transform.localScale;
+            scale.x = 1;
+            transform.localScale = scale;
             transform.position += Vector3.right * Time.deltaTime;
             Walk();
         }

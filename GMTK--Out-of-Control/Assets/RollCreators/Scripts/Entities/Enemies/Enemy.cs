@@ -30,7 +30,7 @@ public abstract class Enemy : MonoBehaviour
         player = null;
     }
 
-    private void OnTriggerStay2D(Collision2D other)
+    private void OnTriggerStay2D(Collider2D other)
     {
         if (other.gameObject.CompareTag("Player"))
         {
