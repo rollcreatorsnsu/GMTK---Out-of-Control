@@ -39,7 +39,7 @@ TextureImporter:
       213: 1454673096539330452
     second: Wizard_young_jump_5
   externalObjects: {}
-  serializedVersion: 10
+  serializedVersion: 11
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -93,6 +93,7 @@ TextureImporter:
   maxTextureSizeSet: 0
   compressionQualitySet: 0
   textureFormatSet: 0
+  applyGammaDecoding: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -131,7 +132,7 @@ TextureImporter:
         height: 72
       alignment: 9
       pivot: {x: 0.5, y: 0.2}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      border: {x: 0, y: 0, z: 0, w: 40}
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -152,7 +153,7 @@ TextureImporter:
         height: 72
       alignment: 9
       pivot: {x: 0.5, y: 0.2}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      border: {x: 0, y: 0, z: 0, w: 40}
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -173,7 +174,7 @@ TextureImporter:
         height: 72
       alignment: 9
       pivot: {x: 0.5, y: 0.2}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      border: {x: 0, y: 6, z: 0, w: 35}
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -194,7 +195,7 @@ TextureImporter:
         height: 72
       alignment: 9
       pivot: {x: 0.5, y: 0.2}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      border: {x: 0, y: 15, z: 0, w: 25}
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -215,7 +216,7 @@ TextureImporter:
         height: 72
       alignment: 9
       pivot: {x: 0.5, y: 0.2}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      border: {x: 0, y: 24, z: 0, w: 14}
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -236,7 +237,7 @@ TextureImporter:
         height: 72
       alignment: 9
       pivot: {x: 0.5, y: 0.2}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      border: {x: 0, y: 40, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
