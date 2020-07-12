@@ -9,6 +9,7 @@ public class Skeleton : Enemy
 
     void Start()
     {
+        base.Start();
         animator = GetComponent<Animator>();
     }
     protected override void Move()

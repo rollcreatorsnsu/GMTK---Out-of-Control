@@ -8,7 +8,7 @@ public abstract class Enemy : MonoBehaviour
     [SerializeField] protected float damage;
     protected Player player;
 
-    void Start()
+    protected void Start()
     {
         fieldOfView.PlayerIn += FollowPlayer;
         fieldOfView.PlayerOut += UnfollowPlayer;

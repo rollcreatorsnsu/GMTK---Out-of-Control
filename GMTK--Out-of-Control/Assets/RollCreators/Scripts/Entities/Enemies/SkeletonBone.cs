@@ -15,7 +15,7 @@ public class SkeletonBone : MonoBehaviour
     {
         Move();
     }
-    private void OnCollisionStay2D(Collider2D other)
+    private void OnCollisionStay2D(Collision2D other)
     {
         if (other.gameObject.CompareTag("Enemy")) return;
         if (other.gameObject.CompareTag("Player"))

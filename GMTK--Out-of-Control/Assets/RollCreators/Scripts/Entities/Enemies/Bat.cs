@@ -7,10 +7,11 @@ public class Bat : Enemy
 
     void Start()
     {
+        base.Start();
         animator = GetComponent<Animator>();
     }
     
-    private void OnTriggerStay2D(Collider2D other)
+    private void OnCollisionStay2D(Collision2D other)
     {
         if (other.gameObject.CompareTag("Player"))
         {
@@ -26,7 +27,7 @@ public class Bat : Enemy
 
     protected override void Die()
     {
-        animator.Play("Die");
+        animator.Play("Вшу");
     }
 
     public void Delete()

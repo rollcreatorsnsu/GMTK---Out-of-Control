@@ -46,7 +46,7 @@ GameObject:
   - component: {fileID: 7687480508257892854}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -214,3 +214,4 @@ MonoBehaviour:
     magicObject: {fileID: 2771235591279979132, guid: f523db31c8f5c3449b83594b570066ee,
       type: 3}
   firePoint: {fileID: 7306010285016752433}
+  magicCircle: {fileID: 0}
