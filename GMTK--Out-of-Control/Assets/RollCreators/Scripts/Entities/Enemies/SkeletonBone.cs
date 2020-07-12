@@ -27,6 +27,6 @@ public class SkeletonBone : MonoBehaviour
 
     protected void Move()
     {
-        transform.position += (player.transform.position - transform.position).normalized * Time.deltaTime;
+        transform.position += (player.transform.position.x < transform.position.x ? Vector3.left : Vector3.right) * Time.deltaTime;
     }
 }
