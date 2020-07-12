@@ -32,6 +32,7 @@ public class Player : MonoBehaviour
     [SerializeField] private float hitTime = 0.5f;
     [SerializeField] private float attackTime = 0.5f;
     [SerializeField] private List<MagicMapItem> magicsList;
+    [SerializeField] private Transform firePoint;
     private float lastHit = 0;
     private float lastAttack = 0;
     private Magic magic;
@@ -91,7 +92,7 @@ public class Player : MonoBehaviour
         if (Time.time - lastAttack < attackTime) return;
         animator.Play(magicAnimationNames[magic]);
         lastAttack = Time.time;
-        Instantiate(magics[magic]);
+        Instantiate(magics[magic], firePoint.position, Quaternion.identity);
     }
 
     private void Die()

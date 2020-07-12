@@ -8,7 +8,7 @@ public class Fireball : MonoBehaviour, IMagic
     // Update is called once per frame
     void Update()
     {
-        transform.position += Vector3.right * Time.time;
+        transform.position += Vector3.right * Time.deltaTime;
     }
 
     void OnTriggerEnter2D(Collider2D other)
