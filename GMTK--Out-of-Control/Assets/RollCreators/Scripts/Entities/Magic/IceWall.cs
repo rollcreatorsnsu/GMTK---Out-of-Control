@@ -5,7 +5,7 @@ using UnityEngine;
 [RequireComponent(typeof(Collider2D), typeof(Rigidbody2D), typeof(Animator))]
 public class IceWall : MonoBehaviour, IMagic
 {
-    [SerializeField] private Animator animator;
+    private Animator animator;
     [SerializeField] private float secondsToLife = 7;
     
     // Start is called before the first frame update
