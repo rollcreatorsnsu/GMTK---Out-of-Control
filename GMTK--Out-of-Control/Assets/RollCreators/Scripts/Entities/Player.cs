@@ -60,7 +60,6 @@ public class Player : MonoBehaviour
     void Update()
     {
         if (health < 0) return;
-//        Debug.Log(jump_move);
         if (Input.GetKeyUp(KeyCode.Z) || Input.GetKeyUp(KeyCode.UpArrow) && !jump_move)
         {
             jump_move = true;
@@ -107,7 +106,6 @@ public class Player : MonoBehaviour
 
     public void Jumped()
     {
-        Debug.Log("jumped");
         jump_move = false;
     }
 
@@ -116,10 +114,6 @@ public class Player : MonoBehaviour
         if (!jump_move)
         {
             animator.Play("Walking");
-        }
-        else
-        {
-            Debug.Log("Move");
         }
     }
 
