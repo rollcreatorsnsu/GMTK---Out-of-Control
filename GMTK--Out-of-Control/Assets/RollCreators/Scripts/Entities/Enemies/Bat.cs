@@ -22,6 +22,9 @@ public class Bat : Enemy
 
     protected override void Move()
     {
+        Vector3 scale = transform.localScale;
+        scale.x = transform.position.x > player.transform.position.x ? -1 : 1;
+        transform.localScale = scale;
         if (!isFlied)
         {
             animator.Play("ToHunt");
