@@ -173,8 +173,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fieldOfView: {fileID: 1482648508071042277}
-  health: 0
-  damage: 4
+  health: 1
+  damage: 1
   distance: 4
   bone: {fileID: 3527445156050313537, guid: 8b9c6719ea89a954383999fc2bb5d67d, type: 3}
 --- !u!1 &3591478059469241804
