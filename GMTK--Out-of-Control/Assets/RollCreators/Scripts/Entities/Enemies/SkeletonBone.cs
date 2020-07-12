@@ -5,6 +5,7 @@ using UnityEngine;
 public class SkeletonBone : MonoBehaviour
 {
     [SerializeField] private float damage;
+    [SerializeField] private float speed = 2;
     private Player player;
     void Start()
     {
@@ -30,6 +31,6 @@ public class SkeletonBone : MonoBehaviour
 
     protected void Move()
     {
-        transform.position += (player.transform.position.x < transform.position.x ? Vector3.left : Vector3.right) * Time.deltaTime;
+        transform.position += (player.transform.position.x < transform.position.x ? Vector3.left : Vector3.right) * Time.deltaTime * speed;
     }
 }
