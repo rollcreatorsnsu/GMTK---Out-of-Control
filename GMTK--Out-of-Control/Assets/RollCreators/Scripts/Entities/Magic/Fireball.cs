@@ -4,11 +4,21 @@
 public class Fireball : MonoBehaviour, IMagic
 {
     [SerializeField] private GameObject explosion;
+    private Vector3 direction;
+
+    void Start()
+    {
+        bool isLeft = GameObject.Find("Player").transform.localScale.x < 0; // TODO: optimization
+        direction = isLeft ? Vector3.left : Vector3.right;
+        Vector3 scale = transform.localScale;
+        scale.x = isLeft ? -1 : 1;
+        transform.localScale = scale;
+    }
 
     // Update is called once per frame
     void Update()
     {
-        transform.position += Vector3.right * Time.deltaTime;
+        transform.position += direction * Time.deltaTime;
     }
 
     void OnTriggerEnter2D(Collider2D other)
