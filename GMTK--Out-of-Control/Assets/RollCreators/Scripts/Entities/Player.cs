@@ -82,27 +82,35 @@ public class Player : MonoBehaviour
             Walk();
         }
         
-        if (Input.GetKeyUp(KeyCode.Z) || Input.GetKeyUp(KeyCode.UpArrow))
+        if (Input.GetKeyUp(KeyCode.Z) || Input.GetKeyUp(KeyCode.UpArrow) && !jump_move)
         {
+            jump_move = true;
+            transform.position += Vector3.up * Time.deltaTime * jump_speed;
             animator.Play("Jump");
-            
         }
 
         if (Input.GetKeyUp(KeyCode.X))
         {
             Attack();
         }
-        if (jump_move == true)
+        
+        if (jump_move)
         {
             transform.position += Vector3.up * Time.deltaTime * jump_speed;
         }
-        
+    }
+
+    public void Jumped()
+    {
         jump_move = false;
     }
 
     private void Walk()
     {
-        animator.Play("Walking");
+        if (!jump_move)
+        {
+            animator.Play("Walking");
+        }
     }
 
     private void Attack()

@@ -4,6 +4,7 @@
 public class Fireball : MonoBehaviour, IMagic
 {
     [SerializeField] private GameObject explosion;
+    [SerializeField] private Transform firePoint;
     private Vector3 direction;
 
     void Start()
@@ -25,7 +26,7 @@ public class Fireball : MonoBehaviour, IMagic
     {
         if (other.gameObject.CompareTag("Enemy") || other.gameObject.CompareTag("Solid"))
         {
-            Instantiate(explosion, transform.position, Quaternion.identity);
+            Instantiate(explosion, firePoint.position, Quaternion.identity);
             Destroy(gameObject);
         }
     }

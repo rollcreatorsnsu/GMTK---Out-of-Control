@@ -8,7 +8,7 @@ public abstract class Enemy : MonoBehaviour
     [SerializeField] protected float damage;
     protected Player player;
 
-    void Start()
+    protected void Start()
     {
         fieldOfView.PlayerIn += FollowPlayer;
         fieldOfView.PlayerOut += UnfollowPlayer;
@@ -16,7 +16,7 @@ public abstract class Enemy : MonoBehaviour
 
     void Update()
     {
-        if (player == null) return;
+        if (player == null || health < 0) return;
         Move();
     }
 
@@ -30,23 +30,17 @@ public abstract class Enemy : MonoBehaviour
         player = null;
     }
 
-    private void OnTriggerStay2D(Collider2D other)
-    {
-        if (other.gameObject.CompareTag("Player"))
-        {
-            player.Hit(damage);
-        }
-    }
-
     public void Hit(float damage)
     {
         health -= damage;
         if (health < 0)
         {
-            Destroy(gameObject);
+            Die();
         }
     }
 
     abstract protected void Move();
+
+    abstract protected void Die();
 
 }

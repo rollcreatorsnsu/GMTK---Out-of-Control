@@ -338,6 +338,7 @@ GameObject:
   m_Component:
   - component: {fileID: 352800356021188217}
   - component: {fileID: 8860473521262037534}
+  - component: {fileID: -4293316382773677465}
   m_Layer: 0
   m_Name: Vertushka
   m_TagString: Untagged
@@ -382,3 +383,32 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &-4293316382773677465
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5542237119792153685}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea2fbe95fd55d5c4e86df3f662d9fc46, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  game: {fileID: 0}
+  enums: 00000000020000000100000003000000
+  activeSprites:
+  - {fileID: -6246062721824389004, guid: fa29b3b0cba249544820fa813f600bfe, type: 3}
+  - {fileID: 8685077388864575728, guid: fa29b3b0cba249544820fa813f600bfe, type: 3}
+  - {fileID: -1388515766092869844, guid: fa29b3b0cba249544820fa813f600bfe, type: 3}
+  - {fileID: 3672223182082440460, guid: fa29b3b0cba249544820fa813f600bfe, type: 3}
+  inactiveSprites:
+  - {fileID: -5505784301242206033, guid: fa29b3b0cba249544820fa813f600bfe, type: 3}
+  - {fileID: 7119002349883303594, guid: fa29b3b0cba249544820fa813f600bfe, type: 3}
+  - {fileID: -1140953881901911216, guid: fa29b3b0cba249544820fa813f600bfe, type: 3}
+  - {fileID: 1752313724658198474, guid: fa29b3b0cba249544820fa813f600bfe, type: 3}
+  images:
+  - {fileID: 8629676798415137376}
+  - {fileID: 5320414660167272072}
+  - {fileID: 6481916853704569125}
+  - {fileID: 1060449349611493655}

@@ -19,11 +19,11 @@ public class NatureRises : MonoBehaviour, IMagic
     {
         foreach (GameObject rise in rises)
         {
-            Destroy(rise);
+            rise.GetComponent<Rise>().Die();
         }
     }
 
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.CompareTag("Enemy"))
         {

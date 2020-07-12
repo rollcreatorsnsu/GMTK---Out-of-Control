@@ -12,7 +12,7 @@ public class FieldOfView : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            PlayerIn.Invoke(other.gameObject.GetComponent<Player>());
+            PlayerIn?.Invoke(other.gameObject.GetComponent<Player>());
         }
     }
 
@@ -20,7 +20,7 @@ public class FieldOfView : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            PlayerOut.Invoke();
+            PlayerOut?.Invoke();
         }
     }
 }
