@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-[RequireComponent(typeof(Collider2D), typeof(Rigidbody2D))]
+[RequireComponent(typeof(Collider2D), typeof(Rigidbody2D), typeof(Animator))]
 public class FireballExplosion : MonoBehaviour
 {
     [SerializeField] private float damage;

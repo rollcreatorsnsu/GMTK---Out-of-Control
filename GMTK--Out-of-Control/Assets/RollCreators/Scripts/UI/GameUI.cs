@@ -5,11 +5,17 @@ using UnityEngine.UI;
 
 public class GameUI : MonoBehaviour
 {
-    [SerializeField] private Text healthBar;
     [SerializeField] private GameObject pausePanel;
+    [SerializeField] private List<Image> healthBar;
+    [SerializeField] private Sprite fullHpSprite;
+    [SerializeField] private Sprite emptyHpSprite;
+
     public void UpdateHealthBar(float health)
     {
-        healthBar.text = $"{health}/5";
+        for (int i = 0; i < 5; i++)
+        {
+            healthBar[0].sprite =  (health > i) ? fullHpSprite : emptyHpSprite;
+        }
     }
 
     public void Menu()

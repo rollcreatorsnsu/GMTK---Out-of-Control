@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof(Collider2D), typeof(Rigidbody2D))]
+[RequireComponent(typeof(Collider2D), typeof(Rigidbody2D), typeof(Animator))]
 public class LightningStrike : MonoBehaviour, IMagic
 {
 
@@ -10,6 +10,12 @@ public class LightningStrike : MonoBehaviour, IMagic
     private HashSet<GameObject> enemies = new HashSet<GameObject>();
     private GameObject player;
     private bool updated = false;
+    private Animator animator;
+
+    void Start()
+    {
+        animator = GetComponent<Animator>();
+    }
 
     // Update is called once per frame
     void Update()
@@ -43,15 +49,15 @@ public class LightningStrike : MonoBehaviour, IMagic
 
     private void HitPlayer(Player player)
     {
+        animator.Play("Light Bolt");
         player.Hit(damage);
-        Destroy(gameObject);
     }
     
     private void HitEnemy(Enemy enemy)
     {
         transform.position = enemy.transform.position;
+        animator.Play("Light Bolt");
         enemy.Hit(damage);
-        Destroy(gameObject);
     }
 
     private void OnTriggerEnter2D(Collider2D other)

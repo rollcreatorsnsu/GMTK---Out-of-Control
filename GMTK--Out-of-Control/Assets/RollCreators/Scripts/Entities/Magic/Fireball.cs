@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-[RequireComponent(typeof(Rigidbody2D), typeof(Collider2D))]
+[RequireComponent(typeof(Rigidbody2D), typeof(Collider2D), typeof(Animator))]
 public class Fireball : MonoBehaviour, IMagic
 {
     [SerializeField] private GameObject explosion;
