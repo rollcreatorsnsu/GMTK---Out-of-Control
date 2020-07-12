@@ -36,7 +36,7 @@ public class Player : MonoBehaviour
     [SerializeField] private List<MagicMapItem> magicsList;
     [SerializeField] private Transform firePoint;
     [SerializeField] private GameObject magicCircle;
-    [SerializeField] private float speed = 2;
+    public float speed = 2;
     private float lastHit = 0;
     private float lastAttack = 0;
     private Magic magic = Magic.FIREBALL;

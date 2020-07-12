@@ -206,7 +206,7 @@ MonoBehaviour:
   fieldOfView: {fileID: 1482648508071042277}
   health: 1
   damage: 1
-  distance: 4
+  distance: 7
   bone: {fileID: 3527445156050313537, guid: 8b9c6719ea89a954383999fc2bb5d67d, type: 3}
   firePoint: {fileID: 7209420295111505052}
 --- !u!1 &3591478059469241804
